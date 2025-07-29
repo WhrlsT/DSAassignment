@@ -1,0 +1,7 @@
+[ "java.util.ArrayList", [ [ "com.mycompany.dsaassignment.entity.Patient", {
+  "patientId" : "Patient1",
+  "name" : "Him",
+  "icOrPassport" : "01",
+  "contact" : "1",
+  "email" : "2"
+} ] ] ]

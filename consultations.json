@@ -1,0 +1,13 @@
+[ "java.util.ArrayList", [ [ "com.mycompany.dsaassignment.entity.Consultation", {
+  "consultationId" : "CON001",
+  "patientId" : "P001",
+  "doctorId" : "D001",
+  "consultationDateTime" : [ 2025, 7, 29, 0, 21, 17, 865454000 ],
+  "diagnosis" : "He died",
+  "treatment" : "Lmao",
+  "notes" : "sux to be u",
+  "status" : "COMPLETED",
+  "followUpDateTime" : null,
+  "followUpReason" : null,
+  "requiresFollowUp" : false
+} ] ] ]

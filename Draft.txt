@@ -1,0 +1,114 @@
+Problem Statement:
+Tunku Abdul Rahman University of Management and Technology (TAR UMT) is establishing
+an on-campus clinic to provide medical care for students. To support clinic operations, a
+Clinic Management System is required that allows students to book an appointment or
+walk-ins for the doctor consultations, make payment, get the medicines and other functions
+as well. Your task is to develop a Clinic Management System that effectively models the
+one-to-many relationships using collection ADTs (Abstract Data Types). You may make
+reasonable assumptions as needed. Marks will be awarded based on the creativity and level
+of competence demonstrated in your implementation.
+
+Requirement : 
+Requirement 1: Cannot use Java Collection Framework such as java.util.List,ArrayList,Arrays,Stack,Queue,Deque, Vector, priorityqueue,Linkedlist, Linkedstack,Hashmap,Dictionary, functions, functional, Hashset, predicate,others collection etc.
+Requirement 2: Apply Entity , Control, Boundary, Utility architecture pattern
+Requirement 3: All code must be written using the standard Java naming convention (i.e. Camel Case).
+
+Entity, Control, Boundary, Utility folders
+● Entity classes represent the data in the system/application. Examples of entity
+classes are Student, Team, and Course.
+● Boundary classes interact with the actors of the system. Examples of boundary
+classes are MaintainCourseUI, RegisterTeamUI, and GenerateReportUI.
+● Control classes implement the business logic for use cases. They orchestrate the
+execution of commands coming from boundary objects by interacting with entity and
+boundary objects. Examples of control classes are MaintainCourse,
+MaintainAssTeam and GenerateReports.
+● Utility classes (if any) contain common methods that are used by other classes to
+perform repetitive general tasks. A utility class contains only static methods and static
+variables. Thus, its methods and variables are accessed using the class name.
+
+DAO folder is used to manage data access objects.
+Class : XXXInitializer, XXXDAO
+
+Constraints for each type of class
+● Actors may only interact with boundary objects.
+● Boundary objects may communicate with actors and control objects only.
+● Control objects may communicate with boundary objects and entity objects, as well as other control objects.
+● Entity objects may only know about other entity objects
+
+User Interface :
+Command Line Interface
+
+Modules : 
+Module 1: Patient Management Module
+Manage patient registration
+* CRUD Patient information
+* View in table format
+* Save in JSON
+
+
+Record maintenance and queuing management.
+* View Queue 
+* Manage queue for patient
+    * Add patient into queue 
+* Edit queue arrangement
+* Save queue in JSON dynamically
+
+Module 2: Doctor Management Module  
+Manage doctor information
+* CRUD doctor information
+* Save in JSON
+
+Duty schedules  
+* Timetable of Doctor
+* Work 8am to 8pm
+
+Availability tracking.
+* Doctor and Room availability
+* Table format
+
+Module 3: Consultation Management Module - Manage patient consultations and arrange subsequent visit appointments.
+Manage patient consulatation 
+* Consultation Appointment in List 
+* CRUD consulatation
+* View in table format
+* Save consultation in JSON
+
+Arrange subsequent visit appointments
+* Integration with Queuing adds the follow-up to the patient’s record and the clinic’s appointment
+* Follow up date ( Show Doctor's Availability and suggested duration (doctor's availability after suggested period of waiting). Final date decided by patient)
+
+Module 4: Medical Treatment Management Module - Manage patient diagnosis and maintain treatment history records
+Module 5: Pharmacy Management Module - Manage medicine dispensing after doctor consultation and maintain medicine stock control.
+
+MAIN Chosen ADT TYPE ( Must apply in all modules ) : List ( Linear array based )
+
+
+// Interface and ADT specification
+public interface ListADT<T> {
+    void add(T element);                // Add element to end
+    void add(int index, T element);     // Add element at index
+    T get(int index);                   // Get element at index
+    T set(int index, T element);        // Replace element at index
+    T remove(int index);                // Remove element at index
+    boolean remove(T element);          // Remove first occurrence
+    int size();                         // Number of elements
+    boolean isEmpty();                  // Is list empty?
+    void clear();                       // Remove all elements
+}
+
+public class ArrayListADT<T> implements ListADT<T> {
+    private T[] data;
+    private int size;
+    private static final int INITIAL_CAPACITY = 10;
+
+    @SuppressWarnings("unchecked")
+    public ArrayListADT() {
+        data = (T[]) new Object[INITIAL_CAPACITY];
+        size = 0;
+    }
+
+    // Implement all methods from ListADT interface
+    // (add, get, set, remove, size, isEmpty, clear, etc.)
+}
+
+
