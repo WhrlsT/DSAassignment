@@ -8,7 +8,6 @@ import com.mycompany.dsaassignment.boundary.PatientUI;
 import com.mycompany.dsaassignment.boundary.QueueUI;
 import com.mycompany.dsaassignment.dao.PatientDAO;
 import com.mycompany.dsaassignment.dao.QueueDAO;
-import java.time.LocalDateTime;
 
 public class PatientManagement {
     private ListADT<Patient> patientList = new ArrayListADT<>();

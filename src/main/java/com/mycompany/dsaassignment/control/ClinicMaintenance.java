@@ -1,7 +1,6 @@
 package com.mycompany.dsaassignment.control;
 
 import com.mycompany.dsaassignment.boundary.ClinicMaintenanceUI;
-import com.mycompany.dsaassignment.utility.InputUtil;
 
 public class ClinicMaintenance {
     private ClinicMaintenanceUI ui = new ClinicMaintenanceUI();
