@@ -77,6 +77,9 @@ Arrange subsequent visit appointments
 * Integration with Queuing adds the follow-up to the patient’s record and the clinic’s appointment
 * Follow up date ( Show Doctor's Availability and suggested duration (doctor's availability after suggested period of waiting). Final date decided by patient)
 
+** On the consultation date of patient
+*** Allow patient to cut into queue (priority)
+
 Module 4: Medical Treatment Management Module - Manage patient diagnosis and maintain treatment history records
 Module 5: Pharmacy Management Module - Manage medicine dispensing after doctor consultation and maintain medicine stock control.
 
